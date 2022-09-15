@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="todo.css"/>
+    <script src="./extra.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <div id="main">
+        <h1>Todo List</h1>
+            <input type="text" id="title" placeholder="Enter Title here.."/><br><br>
+            <input type="text" id="desc" placeholder="Enter Description here.."/><br><br>
+            <input id="add" type="button" value="Add to List ">
+            <input id="save" type="button"   value="Save to List ">
+    </div>
+    <br>
+    <div>
+        <div id="pend">
+            <h1>Pending Tasks</h1>
+            <h4></h4>
+        </div>
+        <br>
+        <div id="com">
+            <h1>Completed Tasks</h1>
+            <h4></h4>
+        </div>
+    </div>
+</body>
+</html>
