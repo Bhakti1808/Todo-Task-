@@ -53,6 +53,7 @@ function abc(id){
             }
         })
         goto()
+      
         
     }
     })
@@ -103,8 +104,8 @@ function xyz(id){
         success : function(){
             // $("#pend h4").empty();
             goto()
-            Pending()
-            Completed()
+            // Pending()
+            // Completed()
 
         }
     })
@@ -163,7 +164,6 @@ function goto(){
         Pending()
         Completed()
     })
-    
 }
 
 // POST request  method
