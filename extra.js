@@ -108,13 +108,13 @@ function xyz(id){
 function Pending(){
     var container = ""
     pending.forEach(value => {
-        container += `<div class='${value.id}' >`;
+        container += `<div class='${value.id}'>`;
         container += `<ul>`;
         container +=`<input type="checkbox" onclick="check('${value.id}')"  id='${value.id}' class="good">`;
         // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "  onclick="edit('${value.id}')"  id='${value.id}'></i>`;
         container +=`<i class="fa fa-trash" type="submit" style="padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
-        container += `<li style="font-style: oblique; font-size:large; ">` + value.title + `</li>`;
-        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;" >` + value.description + `</li>`;
+        container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
+        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px; " >` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
     });
@@ -129,7 +129,7 @@ function Completed() {
         container +=`<input type="checkbox"  onclick="abc('${value.id}')"  id='${value.id}' class="ok" checked>`;
         // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "   onclick="edit('${value.id}')"  id='${value.id}'></i>`;
         container +=`<i class="fa fa-trash" type="submit" style=" padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
-        container += `<li style="font-style: oblique; font-size:large; ">` + value.title + `</li>`;
+        container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
         container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;">` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
