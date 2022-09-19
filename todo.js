@@ -1,4 +1,4 @@
-
+window.alert = function() { throw("An alert called") }
 const url = "https://internapp.vercel.app/bhakti/todos/";
 var pending = []
 var completed = []
