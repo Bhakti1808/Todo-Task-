@@ -94,7 +94,7 @@ function abc(id){
 //     })
 // }
 
-//for delete using DELETE request method
+//for delete using DELETE request method 
 function xyz(id){
     $.ajax({
         url: url+id,
@@ -108,14 +108,18 @@ function xyz(id){
 function Pending(){
     var container = ""
     pending.forEach(value => {
-        container += `<div class='${value.id}'>`;
+        container += `<div class='${value.id} food'>`;
+        container += `<div class="oh">`;
+        container +=`<input type="checkbox"  onclick="check('${value.id}')"  id='${value.id}' class="good">`;
         container += `<ul>`;
-        container +=`<input type="checkbox" onclick="check('${value.id}')"  id='${value.id}' class="good">`;
         // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "  onclick="edit('${value.id}')"  id='${value.id}'></i>`;
-        container +=`<i class="fa fa-trash" type="submit" style="padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
         container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px; " >` + value.description + `</li>`;
         container += `</ul>`;
+        container += `</div>`;
+        container += `<div class="ohk">`;
+        container +=`<i class="fa fa-trash" type="submit" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container += `</div>`;
         container += `</div>`;
     });
     $("#pend h4").append(container)
@@ -124,25 +128,29 @@ function Pending(){
 function Completed() {
     var container = ""
     completed.forEach(value => {
-        container += `<div class='${value.id}' >`;
+        container += `<div class='${value.id} food' >`;
+        container += `<div class="oh">`;
+        container +=`<input type="checkbox"  onclick="abc('${value.id}')"  id='${value.id}'  checked>`;
         container += `<ul>`;
-        container +=`<input type="checkbox"  onclick="abc('${value.id}')"  id='${value.id}' class="ok" checked>`;
         // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "   onclick="edit('${value.id}')"  id='${value.id}'></i>`;
-        container +=`<i class="fa fa-trash" type="submit" style=" padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
         container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;">` + value.description + `</li>`;
         container += `</ul>`;
+        container += `</div>`;
+        container += `<div class="ohk">`;
+        container +=`<i class="fa fa-trash" type="submit"  onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container += `</div>`;
         container += `</div>`;
     });
     $("#com h4").append(container)
 }
 
-// GET request  method
+// GET request  method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 function goto(){
     
     $.get(url, function(data){
 
-        $("#pend h4").empty();
+        $("#pend h4").empty();                           
         $("#com h4").empty();
 
         pending = [];
@@ -151,7 +159,7 @@ function goto(){
             if (value.Completed) {
                 completed.push(value)
             }
-            else{
+            else{                                                                                                                                                                                                                               
                 pending.push(value)
             }
         })

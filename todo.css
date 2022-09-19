@@ -48,14 +48,29 @@ h1{
     font-style: oblique;
     
 }
-#save{
-    background-color: lightgoldenrodyellow;
-}
-ul{
+/* ul{
     background-color: lightgrey;
-    border: 2px solid lightcoral ;
-    
-}
+    border: 2px solid lightcoral;
+} */
 body{
     background-color: lightyellow;
+}
+.food{
+    justify-content: space-between;
+    display: flex;
+    background-color: lightgrey;
+    border: 2px solid lightcoral;
+    margin:10px;
+
+}
+.oh{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.ohk{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+
 }
