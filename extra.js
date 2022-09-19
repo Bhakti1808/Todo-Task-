@@ -53,48 +53,46 @@ function abc(id){
             }
         })
         goto()
-      
-        
     }
     })
    
 }
 
 //for edit and save button working by using GET and PUT request method
-function edit(id){
-    $("#add").hide()
-    $("#save").show()
-    $.get(url, function (data) {
-        $.each(data, function (key, value) {
-            if(id == value.id) {
-                $("#title").val(value.title)
-                $("#desc").val(value.description)
-            }
-        })
-    })
-    $("#save").click(function(){
-      $("#save").hide()
-      $("#add").show()
+// function edit(id){
+//     $("#add").hide()
+//     $("#save").show()
+//     $.get(url, function (data) {
+//         $.each(data, function (key, value) {
+//             if(id == value.id) {
+//                 $("#title").val(value.title)
+//                 $("#desc").val(value.description)
+//             }
+//         })
+//     })
+//     $("#save").click(function(){
+//       $("#save").hide()
+//       $("#add").show()
 
-        var data = {
-            title: $("#title").val(),
-            description: $("#desc").val(),
-        }
-        $.ajax({
-            url: url + id,
-            type: "PUT",
-            data: JSON.stringify(data),
-            contentType: 'application/json',
-            success:function(){
-                $("#title").val('');
-                $("#desc").val('');
-                goto()
-                Pending()
-                Completed()
-            }
-        })
-    })
-}
+//         var data = {
+//             title: $("#title").val(),
+//             description: $("#desc").val(),
+//         }
+//         $.ajax({
+//             url: url + id,
+//             type: "PUT",
+//             data: JSON.stringify(data),
+//             contentType: 'application/json',
+//             success:function(){
+//                 $("#title").val('');
+//                 $("#desc").val('');
+//                 goto()
+//                 Pending()
+//                 Completed()
+//             }
+//         })
+//     })
+// }
 
 //for delete using DELETE request method
 function xyz(id){
@@ -102,11 +100,7 @@ function xyz(id){
         url: url+id,
         type: "DELETE",
         success : function(){
-            // $("#pend h4").empty();
             goto()
-            // Pending()
-            // Completed()
-
         }
     })
 }
@@ -117,10 +111,10 @@ function Pending(){
         container += `<div class='${value.id}' >`;
         container += `<ul>`;
         container +=`<input type="checkbox" onclick="check('${value.id}')"  id='${value.id}' class="good">`;
-        container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "  onclick="edit('${value.id}')"  id='${value.id}'></i>`;
-        container +=`<i class="fa fa-trash" type="submit" style=" padding: 5px;" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "  onclick="edit('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" type="submit" style="padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `<li style="font-style: oblique; font-size:large; ">` + value.title + `</li>`;
-        container += `<li style="font-style: normal; font-size:medium;" >` + value.description + `</li>`;
+        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;" >` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
     });
@@ -133,10 +127,10 @@ function Completed() {
         container += `<div class='${value.id}' >`;
         container += `<ul>`;
         container +=`<input type="checkbox"  onclick="abc('${value.id}')"  id='${value.id}' class="ok" checked>`;
-        container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "   onclick="edit('${value.id}')"  id='${value.id}'></i>`;
-        container +=`<i class="fa fa-trash" type="submit" style=" padding: 5px;" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        // container +=`<i class="fa fa-edit" type="submit" style=" padding-left:800px; "   onclick="edit('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" type="submit" style=" padding-left:800px; padding-top: 10px; " onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `<li style="font-style: oblique; font-size:large; ">` + value.title + `</li>`;
-        container += `<li style="font-style: normal; font-size:medium;">` + value.description + `</li>`;
+        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;">` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
     });

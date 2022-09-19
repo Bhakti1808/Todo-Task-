@@ -27,22 +27,12 @@
 #done{
     background-color: lightblue;
 }
-#add , #save{
+#add{
     background-color: lightgoldenrodyellow;
     border-radius: 5px;
     border: 2px solid black;
 }
-#save{
-    /* border-radius: 5px;
-    border: 2px solid black; */
-    display: none;
-
-}
 #pend{
-    /* background-color: lightseagreen; */
-    /* width: 400px;
-    padding-left: 210px;
-    margin: auto; */
     width: 900px;
     margin: auto;
     font-style: oblique;
@@ -53,10 +43,6 @@ h1{
     font-style: oblique;
 }
 #com{
-    /* background-color: lightseagreen; */
-    /* width: 200px;
-    padding-left: 210px;
-    margin: auto; */
     margin: auto;
     width: 900px;
     font-style: oblique;
@@ -67,6 +53,7 @@ h1{
 }
 ul{
     background-color: lightgrey;
+    border: 2px solid lightcoral ;
     
 }
 body{
