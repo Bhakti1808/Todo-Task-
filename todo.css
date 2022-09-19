@@ -13,7 +13,8 @@
     font-size: medium;
     border-radius: 5px;
     border: 2px solid black;
-    font-style: oblique;    
+    font-style: oblique;
+    cursor: pointer;    
 
 }
 #desc{
@@ -22,6 +23,7 @@
     border-radius: 5px;
     border: 2px solid black;
     font-style: oblique;
+    cursor: pointer;
 
 }
 #done{
@@ -31,6 +33,7 @@
     background-color: lightgoldenrodyellow;
     border-radius: 5px;
     border: 2px solid black;
+    cursor: pointer;
 }
 #pend{
     width: 900px;

@@ -115,14 +115,14 @@ Pending(){
     pending.forEach(value => {
         container += `<div class='${value.id} food'>`;
         container += `<div class="oh">`;
-        container +=`<input type="checkbox"  onclick="check('${value.id}')"  id='${value.id}' class="good">`;
+        container +=`<input type="checkbox" style="cursor:pointer;" onclick="check('${value.id}')"  id='${value.id}' class="good">`;
         container += `<ul>`;
         container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
         container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px; " >` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
         container += `<div class="ohk">`;
-        container +=`<i class="fa fa-trash" type="submit" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" style="cursor:pointer;" type="submit" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `</div>`;
         container += `</div>`;
     });
@@ -135,14 +135,14 @@ Completed() {
     completed.forEach(value => {
         container += `<div class='${value.id} food' >`;
         container += `<div class="oh">`;
-        container +=`<input type="checkbox"  onclick="abc('${value.id}')"  id='${value.id}'  checked>`;
+        container +=`<input type="checkbox" style="cursor:pointer;"  onclick="abc('${value.id}')"   id='${value.id}'  checked>`;
         container += `<ul>`;
         container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
         container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;">` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
         container += `<div class="ohk">`;
-        container +=`<i class="fa fa-trash" type="submit"  onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" style="cursor:pointer;" type="submit"  onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `</div>`;
         container += `</div>`;
     });
