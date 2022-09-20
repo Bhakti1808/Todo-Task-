@@ -3,7 +3,6 @@ const url = "https://internapp.vercel.app/bhakti/todos/";
 var pending = []
 var completed = []
 
-
 class Todo{
     constructor(url){   
         $.get(url, function(data){                         
@@ -178,7 +177,25 @@ var god = new Todo(url)
 
 $("#add").click(function(e){
     e.preventDefault()
-    god.post(url)
+    var data = {
+        id : '',
+        title: $("#title").val(),
+        description: $("#desc").val(),
+        Completed: false,
+        
+    }
+    if(data.title==="" && data.description==="")
+    {
+        lblError.innerHTML="Title required *"
+        lblError12.innerHTML="Description required *"
+
+    }
+    else{
+        $("#lblError").hide()
+        $("#lblError12").hide()
+        god.post(url)
+    }
+   
 })
 function xyz(id){
     god.xyz(id)
