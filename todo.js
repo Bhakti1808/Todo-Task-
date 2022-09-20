@@ -188,14 +188,21 @@ $("#add").click(function(e){
     {
         lblError.innerHTML="Title required *"
         lblError12.innerHTML="Description required *"
-
     }
+    else if(data.title===""){
+        lblError.innerHTML="Title required *"
+        lblError12.innerHTML=""
+        
+    }
+    else if(data.description===""){
+        lblError.innerHTML=""
+        lblError12.innerHTML="Description required *"
+    } 
     else{
+        god.post(url)
         $("#lblError").hide()
         $("#lblError12").hide()
-        god.post(url)
     }
-   
 })
 function xyz(id){
     god.xyz(id)
@@ -205,4 +212,4 @@ function abc(id){
 }
 function check(id){
     god.check(id)
-}
+}                   

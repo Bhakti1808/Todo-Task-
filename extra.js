@@ -9,7 +9,7 @@ var completed = []
 //onclick checkbox data transfer from pend to com
 function check(id){
     if ($("input.good").is(":checked")) {
-        
+    
         var data = {
             completed: [],
             Completed: true
