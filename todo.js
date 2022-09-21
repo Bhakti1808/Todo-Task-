@@ -115,13 +115,13 @@ Pending(){
         container += `<div class='${value.id} food'>`;
         container += `<div class="oh">`;
         container +=`<input type="checkbox" style="cursor:pointer;" onclick="check('${value.id}')"  id='${value.id}' class="good">`;
-        container += `<ul>`;
-        container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
-        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px; " >` + value.description + `</li>`;
+        container += `<ul style="list-style:none;">`;
+        container += `<li style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:larger; padding-top:10px; ">` + value.title + `</li>`;
+        container += `<li style="font-style: normal; font-size:small; padding-bottom:10px;  " >` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
         container += `<div class="ohk">`;
-        container +=`<i class="fa fa-trash" style="cursor:pointer;" type="submit" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" type="submit"  style="cursor:pointer;" id="a" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `</div>`;
         container += `</div>`;
     });
@@ -135,13 +135,13 @@ Completed() {
         container += `<div class='${value.id} food' >`;
         container += `<div class="oh">`;
         container +=`<input type="checkbox" style="cursor:pointer;"  onclick="abc('${value.id}')"   id='${value.id}'  checked>`;
-        container += `<ul>`;
-        container += `<li style="font-style: oblique; font-size:larger; color:brown; ">` + value.title + `</li>`;
-        container += `<li style="font-style: normal; font-size:medium; padding-bottom:10px;">` + value.description + `</li>`;
+        container += `<ul style="list-style:none;">`;
+        container += `<li style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:larger; padding-top:10px ">` + value.title + `</li>`;
+        container += `<li style="font-style: normal; font-size:small; padding-bottom:10px;  padding:top;" >` + value.description + `</li>`;
         container += `</ul>`;
         container += `</div>`;
         container += `<div class="ohk">`;
-        container +=`<i class="fa fa-trash" style="cursor:pointer;" type="submit"  onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
+        container +=`<i class="fa fa-trash" type="submit"  style="cursor:pointer;" id="a" onclick="xyz('${value.id}')"  id='${value.id}'></i>`;
         container += `</div>`;
         container += `</div>`;
     });
@@ -191,8 +191,7 @@ $("#add").click(function(e){
     }
     else if(data.title===""){
         lblError.innerHTML="Title required *"
-        lblError12.innerHTML=""
-        
+        lblError12.innerHTML="" 
     }
     else if(data.description===""){
         lblError.innerHTML=""
