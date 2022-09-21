@@ -199,8 +199,8 @@ $("#add").click(function(e){
     } 
     else{
         god.post(url)
-        $("#lblError").hide()
-        $("#lblError12").hide()
+        $("#lblError").text("")
+        $("#lblError12").text("")
     }
 })
 function xyz(id){
